@@ -43,7 +43,7 @@ export function convert( tsAstProject: Project ): Project {
 			const outputFilePath = `${dir}/${basename}.${extension}`;
 
 			logger.debug( `  Renaming ${sourceFile.getFilePath()} to ${outputFilePath}` );
-			sourceFile.move( outputFilePath );
+			sourceFile.move( outputFilePath, { overwrite: true } );
 		}
 	} );
 
